@@ -1,4 +1,5 @@
 const btns = document.querySelectorAll('.filter-btns__item')
+const select = document.getElementById('filter-options')
 const images = document.querySelectorAll('.filter-content img')
 
 for (let btn of btns) {
@@ -24,4 +25,10 @@ function filterImage(selection) {
             btn.classList.remove('active')
         }
     }
+
+    select.value = selection
 }
+
+select.addEventListener('change', () => {
+    filterImage(select.value)
+})
