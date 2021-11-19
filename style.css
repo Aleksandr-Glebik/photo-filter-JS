@@ -59,3 +59,34 @@ body {
   filter: grayscale(0.7);
   border-radius: 2rem;
 }
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 765px;
+    margin: auto;
+  }
+  .filter-btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(99, 155, 250);
+  }
+  .filter-btns__item {
+    display: none;
+  }
+  #filter-options {
+    display: block;
+    font-size: 2rem;
+    padding: 0.5rem;
+    background-color: rgb(99, 155, 250);
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+  }
+  #filter-options:hover {
+    background-color: #ccc;
+  }
+  .filter-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
