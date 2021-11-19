@@ -11,10 +11,12 @@ for (let btn of btns) {
 
 function filterImage(selection) {
     for (let img of images) {
-        if (!img.classList.contains(selection)) {
-            img.style.display = 'none'
-        } else {
-            img.style.display = 'block'
+        img.style.display = 'none'
+
+        if (img.classList.contains(selection)) {
+            setTimeout(() => {
+                img.style.display = 'block'
+            }, 100)
         }
     }
 
